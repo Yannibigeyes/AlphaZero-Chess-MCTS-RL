@@ -20,16 +20,16 @@ class ALPHA():
         print(self.device)
         self.path = "best_policy.model"
         
-        self.num_epoches     = 1
-        self.train_iteration = 1
-        self.mcts_iteration  = 1
+        self.num_epoches     = 100
+        self.train_iteration = 1000
+        self.mcts_iteration  = 100
         self.learning_rate   = 0.0001
         
         self.Chess_read = CHESS_READ()
         self.NN         = NEURAL_NETWORK(self.learning_rate, self.path, self.device)
         self.mcts_tree  = MCTS(self.mcts_iteration, self.NN, self.Chess_read, self.device)   # iteration length; Neural network; Chess read
                 
-        self.engine      = chess.engine.SimpleEngine.popen_uci(r"C:\Users\yliu3119\Desktop\AlphaZero\stockfish.exe")
+        self.engine      = chess.engine.SimpleEngine.popen_uci(r"C:～\stockfish.exe")
         self.stockfish_flag = True
         
     def training(self): 
