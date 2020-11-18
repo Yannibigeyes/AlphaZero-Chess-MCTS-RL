@@ -11,7 +11,9 @@ I'm the creator of this repo. I and my collaborator, Xiyang Wu, made the same co
 
 # Environment
 Python 3.5
+
 Python-chess 0.29
+
 Stockfish
 
 # Getting started
